@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+
+# Gemini AI assistant temp files
+.gemini/
+
+# Node (if ever added)
+node_modules/
+
+# Logs
+*.log

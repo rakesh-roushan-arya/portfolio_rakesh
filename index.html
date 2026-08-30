@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Rakesh Roushan Arya | Full-Stack Developer & AI Enthusiast</title>
+  <meta name="title" content="Rakesh Roushan Arya | Full-Stack Developer & AI Enthusiast" />
+  <meta name="description" content="Portfolio of Rakesh Roushan Arya — B.Tech CSE student at Lovely Professional University (CGPA: 8.4). Full-Stack MERN Developer, Python & AI enthusiast, creator of Hostel Mart & Voice AI Agent." />
+  <meta name="keywords" content="Rakesh Roushan Arya, Portfolio, Full Stack Developer, Python Developer, AI Developer, MERN Stack, LPU, Lovely Professional University, React Developer" />
+  <meta name="author" content="Rakesh Roushan Arya" />
+  <meta name="theme-color" content="#050c1a" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rakesh Roushan Arya | Full-Stack Developer & AI Enthusiast" />
+  <meta property="og:description" content="B.Tech CSE student at LPU (CGPA: 8.4). Building scalable full-stack apps & AI-powered systems." />
+  <meta property="og:image" content="./assets/images/rakesh-profile.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23050c1a'/><text x='50%25' y='65%25' font-size='50' font-weight='800' fill='%2306b6d4' text-anchor='middle' font-family='monospace'>RA</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <!-- Ambient Particle Canvas & Orbs -->
+  <canvas id="particle-canvas"></canvas>
+  <div class="bg-ambient-layer">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- =====================================================================
+       NAVIGATION BAR
+       ===================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand" aria-label="Rakesh Roushan Arya Portfolio Home">
+        <img src="./assets/images/rakesh-profile.jpg" alt="Rakesh Roushan Arya" class="nav-avatar-img" />
+        <span class="brand-bracket">&lt;</span><span>Rakesh</span><span class="brand-bracket">/&gt;</span>
+        <span class="brand-dot" title="Available for Internships"></span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about"          class="nav-link" data-section="about">About</a></li>
+          <li><a href="#skills"         class="nav-link" data-section="skills">Skills</a></li>
+          <li><a href="#projects"       class="nav-link" data-section="projects">Projects</a></li>
+          <li><a href="#certifications" class="nav-link" data-section="certifications">Certs</a></li>
+          <li><a href="#achievements"   class="nav-link" data-section="achievements">Achievements</a></li>
+          <li><a href="#education"      class="nav-link" data-section="education">Education</a></li>
+          <li><a href="#terminal"       class="nav-link" data-section="terminal">Terminal</a></li>
+          <li><a href="#contact"        class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm">Hire Me 🚀</a>
+        <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Open mobile menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">✕</button>
+    <a href="#about"          class="nav-link" onclick="closeMobileNav()">About</a>
+    <a href="#skills"         class="nav-link" onclick="closeMobileNav()">Skills</a>
+    <a href="#projects"       class="nav-link" onclick="closeMobileNav()">Projects</a>
+    <a href="#certifications" class="nav-link" onclick="closeMobileNav()">Certifications</a>
+    <a href="#achievements"   class="nav-link" onclick="closeMobileNav()">Achievements</a>
+    <a href="#education"      class="nav-link" onclick="closeMobileNav()">Education</a>
+    <a href="#terminal"       class="nav-link" onclick="closeMobileNav()">Terminal</a>
+    <a href="#contact"        class="nav-link" onclick="closeMobileNav()">Contact</a>
+    <a href="#contact" class="btn btn-primary">Hire Me 🚀</a>
+    <a href="./assets/resume/Rakesh_Roushan_Arya_Resume.pdf" target="_blank" download="Rakesh_Roushan_Arya_Resume.pdf" class="btn btn-resume" id="mobile-resume-btn">📄 Resume</a>
+  </div>
+
+  <!-- =====================================================================
+       HERO SECTION
+       ===================================================================== -->
+  <section id="hero" class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Left Content -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            <span>Open to Internships &amp; Software Engineering Roles</span>
+          </div>
+
+          <div class="hero-greeting">Hi, I'm</div>
+          <h1 class="hero-title">
+            <span class="gradient-text">Rakesh Roushan Arya</span>
+          </h1>
+
+          <div class="hero-typing-wrap">
+            <span class="mono">&gt; </span>
+            <span id="typing-text"></span>
+            <span class="typing-cursor"></span>
+          </div>
+
+          <p class="hero-bio">
+            Computer Science &amp; Engineering undergraduate at <strong>Lovely Professional University</strong>
+            with a <strong>CGPA of 8.4</strong>. I build scalable full-stack applications,
+            architect <strong>AI-powered systems</strong>, and love turning ideas into real-world products.
+          </p>
+
+          <div class="hero-meta-pills">
+            <div class="meta-pill"><span>🎓</span> <span>LPU B.Tech CSE</span></div>
+            <div class="meta-pill"><span>⭐</span> <span>CGPA: <strong class="highlight">8.4 / 10</strong></span></div>
+            <div class="meta-pill"><span>⚡</span> <span><strong class="highlight">550+</strong> Problems Solved</span></div>
+            <div class="meta-pill"><span>📍</span> <span>Phagwara, Punjab</span></div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary" id="explore-projects-btn">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="https://github.com/rakeshroushanarya" target="_blank" class="btn btn-outline" id="github-cta-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="./assets/resume/Rakesh_Roushan_Arya_Resume.pdf" target="_blank" download="Rakesh_Roushan_Arya_Resume.pdf" class="btn btn-resume" id="resume-download-btn" title="Download Resume PDF">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="12" y1="18" x2="12" y2="12"/>
+                <polyline points="9 15 12 18 15 15"/>
+              </svg>
+              <span>Resume</span>
+              <span class="resume-badge">PDF</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/rakeshroushanarya" target="_blank" class="btn-icon" id="hero-github-btn" title="GitHub" aria-label="GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/rakesh-roushan-arya/" target="_blank" class="btn-icon" id="hero-linkedin-btn" title="LinkedIn" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+            <a href="mailto:rakesharya109@gmail.com" class="btn-icon" id="hero-email-btn" title="Email" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+            <a href="tel:+919142084352" class="btn-icon" id="hero-phone-btn" title="Phone" aria-label="Phone">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Visual -->
+        <div class="hero-visual">
+          <div class="hero-photo-container">
+            <div class="photo-glow-aura"></div>
+            <div class="photo-outer-ring"></div>
+            <div class="hero-circle-mask">
+              <img src="./assets/images/rakesh-profile.jpg" alt="Rakesh Roushan Arya" class="hero-large-photo" />
+            </div>
+          </div>
+
+          <!-- Interactive Code Window -->
+          <div class="hero-code-mini-wrap" style="width:100%;max-width:360px;">
+            <div class="code-window">
+              <div class="window-header">
+                <div class="window-controls">
+                  <span class="window-dot dot-red"></span>
+                  <span class="window-dot dot-yellow"></span>
+                  <span class="window-dot dot-green"></span>
+                </div>
+                <div class="window-title">rakesh_profile.py</div>
+                <button id="run-code-btn" class="btn-run-code" title="Execute script">▶ Run Code</button>
+              </div>
+              <div class="code-terminal-output" id="code-output-area">
+                <span class="mono" style="color:var(--cyan)">&gt;</span>
+                <span id="code-output-text" style="color:var(--text-secondary)">Click <strong style="color:var(--cyan)">▶ Run Code</strong> to verify candidate.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       METRICS / HIGHLIGHTS BAR
+       ===================================================================== -->
+  <section class="metrics-section" aria-label="Key Statistics">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="glass-card metric-card reveal">
+          <div class="metric-value gradient-text">8.4</div>
+          <div class="metric-label">Academic CGPA</div>
+          <div class="metric-desc">B.Tech CSE @ LPU</div>
+        </div>
+        <div class="glass-card metric-card reveal">
+          <div class="metric-value gradient-text-emerald">550+</div>
+          <div class="metric-label">Problems Solved</div>
+          <div class="metric-desc">CodeChef, CodeTantra, NeoColab</div>
+        </div>
+        <div class="glass-card metric-card reveal">
+          <div class="metric-value gradient-text">3+</div>
+          <div class="metric-label">Certifications</div>
+          <div class="metric-desc">Saylor, Infosys, Outskill</div>
+        </div>
+        <div class="glass-card metric-card reveal">
+          <div class="metric-value gradient-text-emerald">2+</div>
+          <div class="metric-label">Projects Built</div>
+          <div class="metric-desc">Full-Stack & AI-powered</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       ABOUT SECTION
+       ===================================================================== -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">// about me</div>
+        <h2 class="section-title" id="about-heading">Who Am I?</h2>
+        <p class="section-subtitle">
+          A passionate developer who loves building things that matter.
+        </p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm <strong>Rakesh Roushan Arya</strong>, a B.Tech Computer Science student at <strong>Lovely Professional University</strong>, Phagwara. I have a deep passion for crafting elegant, scalable software — from full-stack web applications to AI-powered systems that work offline.
+          </p>
+          <p>
+            My journey started with Python scripting, evolved through competitive programming, and now spans across the MERN stack, AI/ML tooling, and voice-driven interfaces. I believe in building products that solve real-world problems, not just code that compiles.
+          </p>
+          <p>
+            When I'm not coding, I'm sharpening my problem-solving skills on competitive platforms or exploring the latest in generative AI and local LLM inference.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span>🏗️</span>
+              <span>Full-Stack MERN Developer — React, Node.js, MongoDB, Express</span>
+            </div>
+            <div class="highlight-item">
+              <span>🤖</span>
+              <span>AI Enthusiast — Generative AI, LLM Inference, Voice AI</span>
+            </div>
+            <div class="highlight-item">
+              <span>⚙️</span>
+              <span>Python Developer — Automation, Scripting, AI Pipelines</span>
+            </div>
+            <div class="highlight-item">
+              <span>🏆</span>
+              <span>Competitive Programmer — 550+ problems across platforms</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal">
+          <div class="glass-card about-stat-card">
+            <div class="num gradient-text">200+</div>
+            <div class="label">SQL problems on CodeTantra</div>
+          </div>
+          <div class="glass-card about-stat-card">
+            <div class="num gradient-text-emerald">250+</div>
+            <div class="label">Coding problems on CodeChef</div>
+          </div>
+          <div class="glass-card about-stat-card">
+            <div class="num gradient-text">100+</div>
+            <div class="label">Problems solved on NeoColab</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       SKILLS SECTION
+       ===================================================================== -->
+  <section id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">// technical arsenal</div>
+        <h2 class="section-title" id="skills-heading">Skills &amp; Technologies</h2>
+        <p class="section-subtitle">The tools and technologies I use to bring ideas to life.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="glass-card skill-category reveal">
+          <div class="skill-category-title">Languages</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-lang">Python</span>
+            <span class="skill-tag tag-lang">JavaScript</span>
+            <span class="skill-tag tag-lang">C</span>
+            <span class="skill-tag tag-lang">C++</span>
+          </div>
+        </div>
+        <div class="glass-card skill-category reveal">
+          <div class="skill-category-title">Technologies</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-tech">HTML</span>
+            <span class="skill-tag tag-tech">CSS</span>
+            <span class="skill-tag tag-tech">React</span>
+            <span class="skill-tag tag-tech">Next.js</span>
+            <span class="skill-tag tag-tech">Node.js</span>
+            <span class="skill-tag tag-tech">Express.js</span>
+            <span class="skill-tag tag-tech">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="glass-card skill-category reveal">
+          <div class="skill-category-title">Databases &amp; Tools</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-db">PostgreSQL</span>
+            <span class="skill-tag tag-db">MongoDB</span>
+            <span class="skill-tag tag-db">Git</span>
+            <span class="skill-tag tag-db">GitHub</span>
+          </div>
+        </div>
+        <div class="glass-card skill-category reveal">
+          <div class="skill-category-title">AI / ML Stack</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-tech">Ollama</span>
+            <span class="skill-tag tag-tech">Llama 3.2</span>
+            <span class="skill-tag tag-tech">Whisper.cpp</span>
+            <span class="skill-tag tag-tech">Vosk</span>
+            <span class="skill-tag tag-tech">Piper TTS</span>
+            <span class="skill-tag tag-tech">PyAutoGUI</span>
+          </div>
+        </div>
+        <div class="glass-card skill-category reveal">
+          <div class="skill-category-title">Soft Skills</div>
+          <div class="skill-tags">
+            <span class="skill-tag tag-soft">Problem Solving</span>
+            <span class="skill-tag tag-soft">Team Collaboration</span>
+            <span class="skill-tag tag-soft">Time Management</span>
+            <span class="skill-tag tag-soft">Adaptability</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       PROJECTS SECTION
+       ===================================================================== -->
+  <section id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">// featured work</div>
+        <h2 class="section-title" id="projects-heading">Projects</h2>
+        <p class="section-subtitle">Hands-on projects that showcase my engineering depth and creativity.</p>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Hostel Mart -->
+        <div class="glass-card project-card reveal">
+          <div class="project-header">
+            <div class="project-icon">🛒</div>
+            <div class="project-links">
+              <a href="https://github.com/rakeshroushanarya" target="_blank" class="project-link" id="hostelmart-github-link">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="https://hostel-mart-beta.vercel.app/#/" target="_blank" rel="noopener noreferrer" class="project-link live" id="hostelmart-live-link">🟢 Live</a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Hostel Mart</div>
+            <div class="project-date">Jul 2026 – Aug 2026 · Online Hostel Store</div>
+          </div>
+          <ul class="project-bullets">
+            <li>Architected a full-stack e-commerce platform for hostel essentials supporting 50+ product listings with real-time inventory tracking.</li>
+            <li>Engineered secure checkout &amp; order-management with cart persistence, COD and order status tracking for 20+ orders per cycle.</li>
+            <li>Implemented role-based access control across 2 user roles (students &amp; admins), centralizing order history in a single dashboard.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">MongoDB</span>
+            <span class="stack-tag">Express.js</span>
+            <span class="stack-tag">React.js</span>
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <!-- Voice AI Agent -->
+        <div class="glass-card project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" style="background:linear-gradient(135deg,var(--emerald),var(--purple))">🎙️</div>
+            <div class="project-links">
+              <a href="https://github.com/rakeshroushanarya" target="_blank" class="project-link" id="voiceai-github-link">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="project-title">Voice AI Agent</div>
+            <div class="project-date">Jun 2026 – Aug 2026 · AI Desktop Controller</div>
+          </div>
+          <ul class="project-bullets">
+            <li>Architected a voice-controlled AI agent capable of executing local PC operations (file management, app launches, system commands) via natural language — supports both online &amp; fully offline modes.</li>
+            <li>Integrated offline speech-to-text and local LLM inference into a unified voice-command pipeline for zero-internet PC control.</li>
+            <li>Validated offline-first execution across multiple system commands &amp; network conditions with consistent PC-control accuracy.</li>
+          </ul>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Vosk</span>
+            <span class="stack-tag">Whisper.cpp</span>
+            <span class="stack-tag">Ollama</span>
+            <span class="stack-tag">Llama 3.2</span>
+            <span class="stack-tag">PyAutoGUI</span>
+            <span class="stack-tag">Piper TTS</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       CERTIFICATIONS SECTION
+       ===================================================================== -->
+  <section id="certifications" aria-labelledby="certs-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">// verified credentials</div>
+        <h2 class="section-title" id="certs-heading">Certifications</h2>
+        <p class="section-subtitle">Industry-recognized certifications that validate my technical expertise.</p>
+      </div>
+      <div class="certs-grid">
+
+        <!-- Saylor -->
+        <div class="glass-card cert-card reveal">
+          <div class="cert-icon saylor">📘</div>
+          <div class="cert-info">
+            <div class="cert-name">Introduction to Python</div>
+            <div class="cert-issuer">Saylor Academy · CS105</div>
+            <div class="cert-date">📅 February 6, 2026</div>
+            <div>
+              <span class="cert-badge">✅ Verified</span>
+              <span class="cert-badge" style="background:rgba(6,182,212,0.1);color:var(--cyan);border-color:rgba(6,182,212,0.2);">96.84% Grade</span>
+            </div>
+            <div style="font-size:0.72rem;color:var(--text-muted);margin-top:6px;font-family:var(--font-mono)">ID: 2322488042RA · 36 hrs</div>
+          </div>
+        </div>
+
+        <!-- Infosys -->
+        <div class="glass-card cert-card reveal">
+          <div class="cert-icon infosys">🤖</div>
+          <div class="cert-info">
+            <div class="cert-name">Introduction to Artificial Intelligence</div>
+            <div class="cert-issuer">Infosys Springboard</div>
+            <div class="cert-date">📅 March 23, 2026</div>
+            <div>
+              <span class="cert-badge">✅ Verified</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Outskill -->
+        <div class="glass-card cert-card reveal">
+          <div class="cert-icon outskill">🧠</div>
+          <div class="cert-info">
+            <div class="cert-name">Generative AI Mastermind</div>
+            <div class="cert-issuer">Outskill · Vaibhav Sisinty</div>
+            <div class="cert-date">📅 October 2025</div>
+            <div>
+              <span class="cert-badge">✅ Certified</span>
+              <span class="cert-badge" style="background:rgba(139,92,246,0.1);color:var(--purple);border-color:rgba(139,92,246,0.2);">Gen AI</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       ACHIEVEMENTS SECTION
+       ===================================================================== -->
+  <section id="achievements" aria-labelledby="achievements-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">// milestones</div>
+        <h2 class="section-title" id="achievements-heading">Achievements</h2>
+        <p class="section-subtitle">Competitive milestones and coding platform accomplishments.</p>
+      </div>
+      <div class="achievements-grid">
+        <div class="glass-card achievement-card reveal">
+          <div class="achievement-icon">🏆</div>
+          <div class="achievement-num gradient-text">200+</div>
+          <div class="achievement-title">SQL Problems</div>
+          <div class="achievement-desc">Solved 200+ SQL challenges on CodeTantra platform, mastering query optimization and database management.</div>
+        </div>
+        <div class="glass-card achievement-card reveal">
+          <div class="achievement-icon">⚡</div>
+          <div class="achievement-num gradient-text-emerald">100+</div>
+          <div class="achievement-title">NeoColab Problems</div>
+          <div class="achievement-desc">Solved 100+ coding problems on NeoColab, building strong algorithmic thinking and data structure skills.</div>
+        </div>
+        <div class="glass-card achievement-card reveal">
+          <div class="achievement-icon">🔥</div>
+          <div class="achievement-num gradient-text">250+</div>
+          <div class="achievement-title">CodeChef Problems</div>
+          <div class="achievement-desc">Solved 250+ coding problems on CodeChef, competing in rated contests and improving ranking consistently.</div>
+        </div>
+        <div class="glass-card achievement-card reveal">
+          <div class="achievement-icon">🎓</div>
+          <div class="achievement-num gradient-text-emerald">8.4</div>
+          <div class="achievement-title">CGPA at LPU</div>
+          <div class="achievement-desc">Maintaining a strong CGPA of 8.4 in B.Tech Computer Science & Engineering at Lovely Professional University.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       EDUCATION SECTION
+       ===================================================================== -->
+  <section id="education" aria-labelledby="education-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">// academic journey</div>
+        <h2 class="section-title" id="education-heading">Education</h2>
+        <p class="section-subtitle">My academic foundation and the institutions that shaped my thinking.</p>
+      </div>
+      <div class="education-timeline">
+
+        <!-- LPU -->
+        <div class="glass-card edu-card reveal">
+          <div class="edu-icon-col">
+            <div class="edu-icon">🎓</div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-info">
+            <div class="edu-degree">Bachelor of Technology — Computer Science &amp; Engineering</div>
+            <div class="edu-institution">Lovely Professional University, Phagwara, Punjab</div>
+            <div class="edu-meta">
+              <span>📅 Aug 2025 – Present</span>
+              <span>📍 Punjab, India</span>
+            </div>
+            <span class="edu-gpa">⭐ CGPA: <strong style="color:var(--cyan)">8.4 / 10</strong></span>
+          </div>
+        </div>
+
+        <!-- SAE College -->
+        <div class="glass-card edu-card reveal">
+          <div class="edu-icon-col">
+            <div class="edu-icon" style="background:linear-gradient(135deg,var(--emerald),var(--cyan-dark))">🏫</div>
+            <div class="edu-line"></div>
+          </div>
+          <div class="edu-info">
+            <div class="edu-degree">Higher Secondary Education (12th)</div>
+            <div class="edu-institution">SAE College, Jamui, Bihar</div>
+            <div class="edu-meta">
+              <span>📅 April 2022 – March 2024</span>
+              <span>📍 Jamui, Bihar</span>
+            </div>
+            <span class="edu-gpa">📊 Percentage: <strong style="color:var(--cyan)">72%</strong></span>
+          </div>
+        </div>
+
+        <!-- DAV -->
+        <div class="glass-card edu-card reveal">
+          <div class="edu-icon-col">
+            <div class="edu-icon" style="background:linear-gradient(135deg,var(--amber),var(--emerald))">📚</div>
+          </div>
+          <div class="edu-info">
+            <div class="edu-degree">Secondary Education (10th)</div>
+            <div class="edu-institution">DAV Public School, Jamui, Bihar</div>
+            <div class="edu-meta">
+              <span>📅 April 2021 – March 2022</span>
+              <span>📍 Jamui, Bihar</span>
+            </div>
+            <span class="edu-gpa">📊 Percentage: <strong style="color:var(--cyan)">90%</strong></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       INTERACTIVE TERMINAL SECTION
+       ===================================================================== -->
+  <section id="terminal" aria-labelledby="terminal-heading">
+    <div class="container">
+      <div class="section-header reveal" style="text-align:center;">
+        <div class="section-label">// interactive console</div>
+        <h2 class="section-title" id="terminal-heading">Terminal</h2>
+        <p class="section-subtitle" style="max-width:500px;margin:0 auto;">Type commands to explore my profile. Try: <span class="mono">help</span>, <span class="mono">skills</span>, <span class="mono">projects</span>, <span class="mono">contact</span></p>
+      </div>
+      <div class="terminal-wrap reveal">
+        <div class="terminal-window">
+          <div class="terminal-title-bar">
+            <div class="window-controls">
+              <span class="window-dot dot-red"></span>
+              <span class="window-dot dot-yellow"></span>
+              <span class="window-dot dot-green"></span>
+            </div>
+            <div class="window-title" style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-muted)">rakesh@portfolio ~ %</div>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-line">
+              <span class="t-prompt">rakesh@portfolio:~$</span>
+              <span class="t-cmd">whoami</span>
+            </div>
+            <div class="terminal-line" style="padding-left:0">
+              <span class="t-output">Rakesh Roushan Arya — Full-Stack Developer & AI Enthusiast</span>
+            </div>
+            <br>
+            <div class="terminal-line">
+              <span class="t-prompt">rakesh@portfolio:~$</span>
+              <span class="t-cmd">cat readme.txt</span>
+            </div>
+            <div class="terminal-line">
+              <span class="t-output">Welcome! Type <span class="t-key">help</span> to see available commands.</span>
+            </div>
+          </div>
+          <div class="terminal-input-row">
+            <span class="t-prompt" style="font-family:var(--font-mono);font-size:0.82rem;">rakesh@portfolio:~$</span>
+            <input type="text" id="terminal-input" placeholder="Type a command..." autocomplete="off" spellcheck="false" aria-label="Terminal input" />
+            <button id="terminal-submit">Enter ↵</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- =====================================================================
+       CONTACT SECTION
+       ===================================================================== -->
+  <section id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">// get in touch</div>
+        <h2 class="section-title" id="contact-heading">Let's Connect</h2>
+        <p class="section-subtitle">Have a project in mind or want to discuss opportunities? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="glass-card contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <span class="contact-label">Email</span>
+              <span class="contact-value"><a href="mailto:rakesharya109@gmail.com">rakesharya109@gmail.com</a></span>
+            </div>
+          </div>
+          <div class="glass-card contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-detail">
+              <span class="contact-label">Phone</span>
+              <span class="contact-value"><a href="tel:+919142084352">+91-9142084352</a></span>
+            </div>
+          </div>
+          <div class="glass-card contact-item">
+            <div class="contact-icon">💼</div>
+            <div class="contact-detail">
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value"><a href="https://www.linkedin.com/in/rakesh-roushan-arya/" target="_blank">linkedin.com/in/rakesh-roushan-arya</a></span>
+            </div>
+          </div>
+          <div class="glass-card contact-item">
+            <div class="contact-icon">🐙</div>
+            <div class="contact-detail">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value"><a href="https://github.com/rakeshroushanarya" target="_blank">github.com/rakeshroushanarya</a></span>
+            </div>
+          </div>
+          <div class="glass-card contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-detail">
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Phagwara, Punjab, India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal">
+          <form id="contact-form" onsubmit="handleFormSubmit(event)" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your Name" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <input type="text" id="contact-subject" name="subject" placeholder="Project / Internship / Collaboration" />
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" id="contact-submit-btn" style="width:100%;justify-content:center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              <span>Send Message</span>
+            </button>
+            <div id="form-success" style="display:none;text-align:center;color:var(--emerald);font-size:0.9rem;margin-top:12px;padding:10px;background:rgba(16,185,129,0.1);border-radius:var(--radius-sm);border:1px solid rgba(16,185,129,0.2);">
+              ✅ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Built with <span class="heart">❤️</span> by <strong style="color:var(--cyan)">Rakesh Roushan Arya</strong> · 2026</p>
+      <div class="footer-links">
+        <a href="https://github.com/rakeshroushanarya" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/rakesh-roushan-arya/" target="_blank">LinkedIn</a>
+        <a href="mailto:rakesharya109@gmail.com">Email</a>
+        <a href="#hero">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       JAVASCRIPT
+       ===================================================================== -->
+  <script>
+    // ── PARTICLE CANVAS ──────────────────────────────────────────────────
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let animId;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function createParticle() {
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.3,
+        vy: (Math.random() - 0.5) * 0.3,
+        size: Math.random() * 1.5 + 0.3,
+        opacity: Math.random() * 0.5 + 0.1,
+        color: Math.random() > 0.5 ? '6,182,212' : '139,92,246'
+      };
+    }
+
+    function initParticles() {
+      particles = [];
+      const count = Math.min(Math.floor(window.innerWidth / 12), 100);
+      for (let i = 0; i < count; i++) particles.push(createParticle());
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.vx; p.y += p.vy;
+        if (p.x < 0) p.x = canvas.width;
+        if (p.x > canvas.width) p.x = 0;
+        if (p.y < 0) p.y = canvas.height;
+        if (p.y > canvas.height) p.y = 0;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(${p.color},${p.opacity})`;
+        ctx.fill();
+      });
+
+      // Draw connecting lines
+      particles.forEach((p, i) => {
+        particles.slice(i + 1).forEach(q => {
+          const dx = p.x - q.x, dy = p.y - q.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 100) {
+            ctx.beginPath();
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(q.x, q.y);
+            ctx.strokeStyle = `rgba(6,182,212,${0.08 * (1 - dist / 100)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        });
+      });
+
+      animId = requestAnimationFrame(drawParticles);
+    }
+
+    resizeCanvas(); initParticles(); drawParticles();
+    window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+
+    // ── NAVBAR ─────────────────────────────────────────────────────────
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+      highlightActiveSection();
+    });
+
+    function highlightActiveSection() {
+      const sections = document.querySelectorAll('section[id]');
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      document.querySelectorAll('.nav-link[data-section]').forEach(a => {
+        a.classList.toggle('active', a.dataset.section === current);
+      });
+    }
+
+    // ── MOBILE NAV ─────────────────────────────────────────────────────
+    document.getElementById('mobile-toggle-btn').addEventListener('click', () => {
+      document.getElementById('mobile-nav').classList.add('open');
+    });
+    document.getElementById('mobile-nav-close').addEventListener('click', closeMobileNav);
+    function closeMobileNav() {
+      document.getElementById('mobile-nav').classList.remove('open');
+    }
+
+    // ── TYPING EFFECT ─────────────────────────────────────────────────
+    const phrases = [
+      'Full-Stack Developer',
+      'Python Enthusiast',
+      'AI & GenAI Builder',
+      'MERN Stack Developer',
+      'Problem Solver',
+      'Voice AI Architect'
+    ];
+    let phraseIndex = 0, charIndex = 0, deleting = false;
+    const typingEl = document.getElementById('typing-text');
+
+    function typeLoop() {
+      const current = phrases[phraseIndex];
+      typingEl.textContent = deleting ? current.slice(0, charIndex--) : current.slice(0, charIndex++);
+      const pauseAtEnd = !deleting && charIndex === current.length + 1;
+      const pauseAtStart = deleting && charIndex < 0;
+      if (pauseAtStart) { deleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; charIndex = 0; }
+      if (pauseAtEnd) { deleting = true; setTimeout(typeLoop, 1200); return; }
+      setTimeout(typeLoop, deleting ? 45 : 75);
+    }
+    typeLoop();
+
+    // ── RUN CODE BUTTON ─────────────────────────────────────────────
+    document.getElementById('run-code-btn').addEventListener('click', function() {
+      const output = document.getElementById('code-output-text');
+      const area = document.getElementById('code-output-area');
+      const lines = [
+        { text: 'Running rakesh_profile.py...', color: 'var(--text-muted)', delay: 0 },
+        { text: '✓ name = "Rakesh Roushan Arya"', color: 'var(--emerald)', delay: 400 },
+        { text: '✓ cgpa = 8.4  | university = "LPU"', color: 'var(--emerald)', delay: 750 },
+        { text: '✓ stack = ["MERN", "Python", "AI"]', color: 'var(--cyan)', delay: 1100 },
+        { text: '✓ problems_solved = 550+', color: 'var(--cyan)', delay: 1450 },
+        { text: '✓ status = "Available for Internship 🚀"', color: 'var(--amber)', delay: 1800 },
+        { text: '>>> Candidate verified. Hire now!', color: 'var(--emerald)', delay: 2200 },
+      ];
+      this.disabled = true;
+      area.innerHTML = '';
+      lines.forEach(({ text, color, delay }) => {
+        setTimeout(() => {
+          const line = document.createElement('div');
+          line.style.cssText = `color:${color};font-family:var(--font-mono);font-size:0.75rem;line-height:1.8;`;
+          line.textContent = text;
+          area.appendChild(line);
+        }, delay);
+      });
+      setTimeout(() => { this.disabled = false; }, 2600);
+    });
+
+    // ── SCROLL REVEAL ─────────────────────────────────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── TERMINAL ──────────────────────────────────────────────────────
+    const terminalBody = document.getElementById('terminal-body');
+    const terminalInput = document.getElementById('terminal-input');
+    const terminalSubmit = document.getElementById('terminal-submit');
+
+    const commands = {
+      help: () => `<span style="color:var(--cyan)">Available commands:</span>
+<span style="color:var(--text-muted)">  whoami      </span><span style="color:var(--text-secondary)">→ Who is Rakesh?</span>
+<span style="color:var(--text-muted)">  skills      </span><span style="color:var(--text-secondary)">→ Technical skills</span>
+<span style="color:var(--text-muted)">  projects    </span><span style="color:var(--text-secondary)">→ Featured projects</span>
+<span style="color:var(--text-muted)">  certs       </span><span style="color:var(--text-secondary)">→ Certifications</span>
+<span style="color:var(--text-muted)">  education   </span><span style="color:var(--text-secondary)">→ Academic background</span>
+<span style="color:var(--text-muted)">  contact     </span><span style="color:var(--text-secondary)">→ Get in touch</span>
+<span style="color:var(--text-muted)">  achievements</span><span style="color:var(--text-secondary)">→ Milestones</span>
+<span style="color:var(--text-muted)">  clear       </span><span style="color:var(--text-secondary)">→ Clear terminal</span>`,
+
+      whoami: () => `<span style="color:var(--emerald)">Rakesh Roushan Arya</span>
+<span style="color:var(--text-secondary)">Full-Stack Developer & AI Enthusiast</span>
+<span style="color:var(--text-secondary)">B.Tech CSE @ LPU | CGPA: 8.4</span>
+<span style="color:var(--cyan)">Email:</span> <span style="color:var(--text-secondary)">rakesharya109@gmail.com</span>
+<span style="color:var(--cyan)">Phone:</span> <span style="color:var(--text-secondary)">+91-9142084352</span>`,
+
+      skills: () => `<span style="color:var(--cyan)">Languages:</span>   <span style="color:var(--amber)">Python, JavaScript, C, C++</span>
+<span style="color:var(--cyan)">Frontend:</span>    <span style="color:var(--amber)">HTML, CSS, React, Next.js, Tailwind</span>
+<span style="color:var(--cyan)">Backend:</span>     <span style="color:var(--amber)">Node.js, Express.js</span>
+<span style="color:var(--cyan)">Databases:</span>  <span style="color:var(--amber)">MongoDB, PostgreSQL</span>
+<span style="color:var(--cyan)">Tools:</span>       <span style="color:var(--amber)">Git, GitHub</span>
+<span style="color:var(--cyan)">AI Stack:</span>    <span style="color:var(--amber)">Ollama, Llama 3.2, Whisper, Vosk, Piper TTS</span>`,
+
+      projects: () => `<span style="color:var(--emerald)">1. Hostel Mart</span> — Full-Stack E-Commerce (Jul–Aug 2026)
+   <span style="color:var(--text-muted)">Stack: MongoDB, Express, React, Node, Tailwind</span>
+   <span style="color:var(--text-muted)">50+ products | Role-based access | COD checkout</span>
+
+<span style="color:var(--purple)">2. Voice AI Agent</span> — Offline AI Desktop Controller (Jun–Aug 2026)
+   <span style="color:var(--text-muted)">Stack: Python, Vosk, Whisper.cpp, Ollama, Piper TTS</span>
+   <span style="color:var(--text-muted)">Fully offline | PC control | File management via voice</span>`,
+
+      certs: () => `<span style="color:var(--amber)">📘 Intro to Python</span> — Saylor Academy (Feb 2026) | Grade: 96.84%
+<span style="color:var(--amber)">🤖 Intro to AI</span>      — Infosys Springboard (Mar 2026)
+<span style="color:var(--amber)">🧠 Generative AI</span>    — Outskill (Oct 2025) | Vaibhav Sisinty`,
+
+      education: () => `<span style="color:var(--cyan)">🎓 B.Tech CSE</span> — LPU, Phagwara (2025–Present)
+   <span style="color:var(--text-muted)">CGPA: 8.4</span>
+<span style="color:var(--cyan)">🏫 Higher Secondary</span> — SAE College, Jamui (2022–2024)
+   <span style="color:var(--text-muted)">Percentage: 72%</span>
+<span style="color:var(--cyan)">📚 Secondary</span> — DAV Public School, Jamui (2021–2022)
+   <span style="color:var(--text-muted)">Percentage: 90%</span>`,
+
+      contact: () => `<span style="color:var(--cyan)">📧 Email:</span>    rakesharya109@gmail.com
+<span style="color:var(--cyan)">📱 Phone:</span>    +91-9142084352
+<span style="color:var(--cyan)">💼 LinkedIn:</span> linkedin.com/in/rakesh-roushan-arya
+<span style="color:var(--cyan)">🐙 GitHub:</span>   github.com/rakeshroushanarya`,
+
+      achievements: () => `<span style="color:var(--emerald)">🏆 200+</span> SQL problems solved on CodeTantra
+<span style="color:var(--emerald)">⚡ 100+</span> problems solved on NeoColab
+<span style="color:var(--emerald)">🔥 250+</span> coding problems on CodeChef
+<span style="color:var(--emerald)">⭐ 8.4</span> CGPA at Lovely Professional University`,
+
+      clear: () => null
+    };
+
+    function runTerminalCommand(cmd) {
+      const trimmed = cmd.trim().toLowerCase();
+      const inputLine = document.createElement('div');
+      inputLine.className = 'terminal-line';
+      inputLine.innerHTML = `<span class="t-prompt">rakesh@portfolio:~$</span> <span class="t-cmd">${escapeHtml(cmd)}</span>`;
+      terminalBody.appendChild(inputLine);
+
+      if (trimmed === 'clear') {
+        terminalBody.innerHTML = '';
+        return;
+      }
+
+      const outputDiv = document.createElement('div');
+      outputDiv.style.cssText = 'padding:2px 0 8px 0;line-height:1.8;font-size:0.8rem;';
+      if (commands[trimmed]) {
+        outputDiv.innerHTML = commands[trimmed]();
+      } else if (trimmed === '') {
+        return;
+      } else {
+        outputDiv.innerHTML = `<span style="color:#f87171">bash: ${escapeHtml(cmd)}: command not found. Type <span style="color:var(--cyan)">help</span> for available commands.</span>`;
+      }
+      terminalBody.appendChild(outputDiv);
+      terminalBody.scrollTop = terminalBody.scrollHeight;
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    terminalSubmit.addEventListener('click', () => {
+      const val = terminalInput.value;
+      if (val.trim()) { runTerminalCommand(val); terminalInput.value = ''; }
+    });
+    terminalInput.addEventListener('keydown', e => {
+      if (e.key === 'Enter') { runTerminalCommand(terminalInput.value); terminalInput.value = ''; }
+    });
+
+    // ── CONTACT FORM ─────────────────────────────────────────────────
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('contact-submit-btn');
+      const success = document.getElementById('form-success');
+      btn.disabled = true;
+      btn.innerHTML = '<span>Sending...</span>';
+      setTimeout(() => {
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg><span>Send Message</span>';
+        btn.disabled = false;
+        success.style.display = 'block';
+        document.getElementById('contact-form').reset();
+        setTimeout(() => { success.style.display = 'none'; }, 5000);
+      }, 1200);
+    }
+  </script>
+
+</body>
+</html>
