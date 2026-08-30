@@ -2,7 +2,7 @@
 
 A stunning personal portfolio website built with HTML, CSS & Vanilla JavaScript.
 
-🌐 **Live:** https://rakeshroushanarya.github.io/Portfolio_Rakesh
+🌐 **Live:** https://rakesh-roushan-arya.github.io/portfolio_rakesh/
 
 ## ✨ Features
 - Dark glassmorphism design with particle canvas background
